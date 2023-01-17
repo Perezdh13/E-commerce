@@ -1,3 +1,5 @@
+const { Module } = require("module");
+
 let cart = JSON.parse(localStorage.getItem('cart')) || []
 let totalItem = totalItem2();
 const DOMcart = document.querySelector('.main-cart');
@@ -121,8 +123,8 @@ function addAndDelete(event) {
     }
     if (order == "subtract") {
         cart.forEach(item => {
-            if (item.id == productId) {item.quantity-- }
-            if (item.quantity == 0) {deleteProduct(event) }
+            if (item.id == productId) { item.quantity-- }
+            if (item.quantity == 0) { deleteProduct(event) }
         })
     }
 
@@ -139,3 +141,5 @@ add.forEach(button => {
 subtract.forEach(button => {
     button.addEventListener("click", addAndDelete)
 })
+
+module.exports = totalItem2
