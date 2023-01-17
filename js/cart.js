@@ -1,4 +1,4 @@
-const { Module } = require("module");
+
 
 let cart = JSON.parse(localStorage.getItem('cart')) || []
 let totalItem = totalItem2();
