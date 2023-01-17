@@ -20,4 +20,12 @@ Este es un proyecto de un e-comerce realizado por un grupo de alumnos de Factori
 
 Actualmente este proyecto es un proyecto en desarrollo que se seguira desarrollando a medida que el curso avance y aprendamos nuevas tecnicas ( implementacion de nuevos lenguajes de programacion, refactorizacion de funciones y clean code, etc ...), si quereis visitar la pagina del proyecto podesis hacerlo desde este enlace https://perezdh13.github.io/e-comerce/
 
-Para la realizacion de este proyecto hemos creado un  Wireframe en Figma, ademas de un pequeño User FLow creado con PowerPoint. Los lenguajes de programacion utilizados an sido HTML, CSS y JavaScript, este ultimo ademas a sido utilizado para la creacion de todos los productos de la pagina en un formato tipo
+Para la realizacion de este proyecto hemos creado un  Wireframe en Figma, ademas de un pequeño User FLow creado con PowerPoint. Los lenguajes de programacion utilizados an sido HTML, CSS y JavaScript, este ultimo ademas a sido utilizado para la creacion de todos los productos de la pagina en un formato tipo JSON. 
+
+Todos los elementos que seleccionamos en el carrito de la compra son guardados en el Local Storage de esta manera no se pierden los datos si deseamos dejar la cesta llena y completar la compra en otro momento, el carrito ademas nos permite:
+    
+    * Añadir o eliminar articulos de un mismo producto de forma individial
+    
+    * Eliminar un producto en su totalidad con un simple 'click' independientemente del numero de articulos del producto
+    
+    * Eliminar el carrito en su totatilad
