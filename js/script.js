@@ -4,10 +4,6 @@ const DOMproducts = document.querySelector('#products');
 const DOMexclusive = document.querySelector('#exclusive');
 const DOMtotalItem = document.querySelectorAll('.totalItem')
 
-
-
-
-
 function renderIndex() {
 
     var news = products.filter(item => item.category == "New");
@@ -15,13 +11,9 @@ function renderIndex() {
     var exclusive = products.filter(item => item.category == "Exclusive");
 
     news.forEach((item) => { DOMnew.appendChild(printNew(item)) });
-
     product.forEach((item) => { DOMproducts.appendChild(printNew(item)) });
-
     exclusive.forEach((item) => { DOMexclusive.appendChild(printNew(item)) });
-
-}
-
+};
 
 function printNew(item) {
 
@@ -57,18 +49,12 @@ function printNew(item) {
     myProduct.appendChild(myProductPrice);
     myProduct.appendChild(myProductButton);
     return myProduct
-}
-
-
+};
 
 function shoppingButton(event) {
 
     let des = event.target.getAttribute('marker')
-   
     let storage = products[des];
-
-    let prueba = products.find(element => element.id = des)
-    
 
     const exist = cart.some(product => product.id === storage.id);
     if (exist) {
@@ -82,22 +68,18 @@ function shoppingButton(event) {
         });
         cart = [...pro]
 
-    }else {
+    } else {
         cart.push(storage)
     }
+
     localStorage.setItem('cart', JSON.stringify(cart))
     location.reload()
-    
     totalItem2()
     location.reload()
-}
+};
 
-DOMtotalItem.forEach (boton => {
+DOMtotalItem.forEach(boton => {
     boton.innerHTML += totalItem2()
-})
-
+});
 
 renderIndex();
-
-
-

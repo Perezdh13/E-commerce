@@ -6,22 +6,30 @@ const DOMcart = document.querySelector('.main-cart');
 const DOMbuttonDeleteCart = document.querySelector('.deleteCart');
 const total = document.querySelector('#total');
 
+printCart()
 
-DOMbuttonDeleteCart.addEventListener('click', clearCart)
+const add = document.querySelectorAll(".add");
+const subtract = document.querySelectorAll(".subtract");
+const deletebutton = document.querySelectorAll('#delete-button');
 
+DOMbuttonDeleteCart.addEventListener('click', clearCart);
 
-
-
+add.forEach(button => {
+    button.addEventListener("click", addAndDelete);
+});
+subtract.forEach(button => {
+    button.addEventListener("click", addAndDelete);
+});
+deletebutton.forEach(boton => {
+    boton.addEventListener("click", deleteProduct);
+});
 
 function printCart() {
 
     if (cart !== null) {
         cart.forEach((item) => {
-
             var totalProduct = item.quantity * item.price;
-
             let print = document.createElement('tr');
-
             print.innerHTML = `
                 <td style= "height: 15vh">
                     <img src="${item.image}" style="height: 100%">
@@ -41,17 +49,15 @@ function printCart() {
                 <td>
                     <p>${totalProduct} €</p>
                 </td>
-            
             `;
-
             DOMcart.appendChild(print);
         })
     }
-}
+};
 
 function reloadCart() {
     cart = JSON.parse(localStorage.getItem('cart'))
-}
+};
 
 function clearCart() {
     localStorage.clear()
@@ -60,34 +66,21 @@ function clearCart() {
     totalItem2()
     totalCart()
     location.reload()
-}
-printCart()
-const deletebutton = document.querySelectorAll('#delete-button')
-
-
-deletebutton.forEach(boton => {
-    boton.addEventListener("click", deleteProduct)
-})
-
-
+};
 
 function deleteProduct(event) {
 
     const productId = event.target.dataset.id;
-    console.info(productId)
     cart = cart.filter(prd => prd.id.toString() !== productId.toString());
     localStorage.setItem('cart', JSON.stringify(cart));
     printCart();
     location.reload()
     totalItem2()
-
-}
-
+};
 
 function totalItem2() {
     let sumatorio = 0;
 
-    console.info(sumatorio)
     if (cart !== null) {
         cart.forEach(item => {
             sumatorio += item.quantity
@@ -95,7 +88,6 @@ function totalItem2() {
     }
     return sumatorio
 };
-
 
 function totalCart() {
     var total = 0;
@@ -105,41 +97,29 @@ function totalCart() {
         }
     }
     return total;
-}
+};
 
 total.innerHTML += totalCart() + '€';
 
-
 function addAndDelete(event) {
-    const productId = event.target.dataset.id
-    const order = event.target.dataset.type
+    const productId = event.target.dataset.id;
+    const order = event.target.dataset.type;
 
     if (order == "add") {
         cart.forEach(item => {
             if (item.id == productId) {
                 item.quantity++
             }
-        })
+        });
     }
     if (order == "subtract") {
         cart.forEach(item => {
             if (item.id == productId) { item.quantity-- }
             if (item.quantity == 0) { deleteProduct(event) }
-        })
+        });
     }
-
     localStorage.setItem('cart', JSON.stringify(cart))
     location.reload()
+};
 
-}
-const add = document.querySelectorAll(".add")
-const subtract = document.querySelectorAll(".subtract")
 
-add.forEach(button => {
-    button.addEventListener("click", addAndDelete)
-})
-subtract.forEach(button => {
-    button.addEventListener("click", addAndDelete)
-})
-
-module.exports = totalItem2
