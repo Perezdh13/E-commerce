@@ -2,7 +2,18 @@ const divisa = '€';
 const DOMnew = document.querySelector('#new');
 const DOMproducts = document.querySelector('#products');
 const DOMexclusive = document.querySelector('#exclusive');
-const DOMtotalItem = document.querySelectorAll('.totalItem')
+const DOMtotalItem = document.querySelectorAll('.totalItem');
+const DOMtotal = document.querySelectorAll('#total');
+
+DOMtotalItem.forEach (boton => {
+    boton.innerHTML += totalItem2()
+})
+
+DOMtotal.forEach(param => {
+    param.innerHTML += totalCart() + '€';
+})
+
+
 
 function renderIndex() {
 
@@ -37,7 +48,7 @@ function printNew(item) {
     myProductPrice.id = 'product-price';
 
     const myProductButton = document.createElement("button");
-    myProductButton.innerHTML = "Shop"
+    myProductButton.innerHTML = "Añadir"
     myProductButton.id = 'product-button';
     myProductButton.setAttribute('marker', item.id);
     myProductButton.addEventListener('click', shoppingButton);
@@ -53,8 +64,14 @@ function printNew(item) {
 
 function shoppingButton(event) {
 
-    let des = event.target.getAttribute('marker')
-    let storage = products[des];
+    let itemMarker = event.target.getAttribute('marker')
+
+    //let position = products.map(element => element.id.toString()).indexOf(itemMarker);
+    //console.info(typeof itemMarker)
+    let storage = products.find(element => element.id.toString() == itemMarker )
+    // console.info(object)
+    //let storage = products[position];
+    
 
     const exist = cart.some(product => product.id === storage.id);
     if (exist) {
@@ -73,13 +90,10 @@ function shoppingButton(event) {
     }
 
     localStorage.setItem('cart', JSON.stringify(cart))
-    location.reload()
+    
     totalItem2()
     location.reload()
 };
 
-DOMtotalItem.forEach(boton => {
-    boton.innerHTML += totalItem2()
-});
 
 renderIndex();

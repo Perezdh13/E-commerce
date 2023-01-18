@@ -10,9 +10,9 @@ const products = [
     },
     {
         id: 1,
-        name: "Bebida de cafe Asahi Wonda",
+        name: "Bebida de café Asahi Wonda",
         price: 1.50,
-        description: "El cafe de la marca Asahi, fabricado por japoneses y para japoneses, es un producto exclusivo.",
+        description: "El café de la marca Asahi, fabricado por japoneses y para japoneses.",
         image: 'imagenes/prd-bebida-cafe-asahi-wonda-gold-premium-1-japonshop_2.webp',
         category: "New",
         quantity: 1
@@ -21,22 +21,22 @@ const products = [
         id: 2,
         name: "Bombones de chocolate",
         price: 3,
-        description: "Una explosion de sabor inigualable, fabricado por los más expertos chocolateros nipones.",
+        description: "Una explosión de sabor inigualable, fabricado por los más expertos chocolateros nipones.",
         image: 'imagenes/prd-bombones-petit-melo-chocolate-frambuesa-japonshop.webp',
         category: "New",
         quantity: 1
     },
     {
         id: 3,
-        name: "Chicles de melocoton",
+        name: "Chicles de melocotón",
         price: 2.50,
-        description: "Chicles sabor melocoton, no te concederan poderes, pero estan riquisimos.",
+        description: "Chicles sabor melocotón, no te concederán poderes, pero están riquísimos.",
         image: 'imagenes/prd-chicles-one-piece-japon-japonshop.webp',
         category: "New",
         quantity: 1
     },
     {
-        id: 4,
+        id: "2547B",
         name: "Fideos Ramen Naruto",
         price: 2,
         description: "Una bolsita de fideos, sabor a pollo, con los ingredientes preferidos de nuestro amado Naruto.",
@@ -55,9 +55,9 @@ const products = [
     },
     {
         id: 6,
-        name: "Galleta Pokemon",
+        name: "Galleta Pokémon",
         price: 3,
-        description: "Una adorable galletita con un pokemon sorpresa. Hay mas de 20 misteriosos pokemons por comer!",
+        description: "Una adorable galletita con un pokémon sorpresa. Hay mas de 20 misteriosos pokemons por comer!",
         image: 'imagenes/prd-galleta-pokemon-fresa-japonshop.webp',
         category: "Products",
         quantity: 1
@@ -84,7 +84,7 @@ const products = [
         id: 9,
         name: "Salsa de curry de Doraemon",
         price: 3.20,
-        description: "Una salsa de curry, con cerdo, verduras y queso, que se ha sacado Doraemon del bolsillo magico.",
+        description: "Una salsa de curry, con cerdo, verduras y queso, que se ha sacado Doraemon del bolsillo mágico.",
         image: 'imagenes/prd-salsa-curry-japonesa-cerdo-verduras-queso-doraemon-japonshop_1.webp',
         category: "Exclusive",
         quantity: 1
@@ -93,7 +93,7 @@ const products = [
         id: 10,
         name: "Sopa de maiz de Pokemon",
         price: 1.75,
-        description: "Nutritiva sopita de maiz con tematica de Pokemon. *No incluye trazas de pokemons",
+        description: "Nutritiva sopita de maiz con temática de Pokemon. *No incluye trazas de pokemons.",
         image: 'imagenes/prd-sopa-maiz-pokemon-japonesa-japonshop.webp',
         category: "Exclusive",
         quantity: 1
@@ -102,7 +102,7 @@ const products = [
         id: 11,
         name: "Cebada japonesa Rilakkum",
         price: 5,
-        description: "Una imperial cebada nipona, limitada y exclusiva, del osito Rilakkum",
+        description: "Una imperial cebada nipona, limitada y exclusiva, del osito Rilakkum.",
         image: 'imagenes/prd-te-cebada-japones-edicion-limitada-rilakkuma-japonshop.webp',
         category: "Exclusive",
         quantity: 1

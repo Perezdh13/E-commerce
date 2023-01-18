@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    
+
+    <script src="./js/Objects.js" defer></script>
+    <script src="./js/cart.js" defer></script>
+    <script src="./js/script.js" defer></script>
+    <script src="./js/Shipping.js" defer></script>
+    <script src="./js/API.respond.js"></script>
+
+    <title>Shipping</title>
+  </head>
+
+  <body>
+    <div class="mainContent">
+
+      <header>
+          <div class="nav">
+              <div class="menu"><img src="imagenes/menu.png" alt="menu" class="menu-img"></div>
+              <div class="logo"><a href="index.html"><img src="imagenes/logo.png" alt="logo" class="logo-img"></a></div>
+              <div class="bolsa"><a href="cartPage.html"><img src="imagenes/bolsa.png" alt="bolsa" class="bolsa-img"><p class="totalItem"></p></a></div>
+          </div>
+      </header>
+      <hr class="line2">
+      
+      <section >
+        
+          <div class="body-cart">
+              <div >
+                  <h2>Articles</h2>
+                  <table class="main-shopping">
+                      <tr>
+                        <td></td>
+                        <td>Producto</td>
+                        <td>Precio</td>
+                        <td>Cantidad</td>
+                        <td>Total</td>
+                      </tr>
+                  </table>
+                  
+              </div>
+              <div class="total-cart">
+                <form action="get">
+  
+  
+                  <h2>Enter Shipping Details</h2>
+                  <h5>NAME</h5>
+                  <input type="text" name="" id="">
+                  <h5>SURNAMES</h5>
+                  <input type="text" name="" id="">
+                  <h5>DIRECTIONS</h5>
+                  <input type="text" name="" id="">
+                  <h5>EMAIL</h5>
+                  <input type="mail" name="" id="">
+                  <h5>PHONE</h5>
+                  <input type="tel" name="" id="">
+                  <p id="total">Total<br></p>
+                  <button id="tramitarPedido">Ended Shopping</button>
+                </form>
+              </div>
+          </div>
+          <a href="index.html"> --Continue Shopping</a>
+      </section>
+      <hr class="line2">
+      <footer>
+        <div class="footer">
+          <img src="imagenes/twitter.png" class="twitter" />
+          <img src="imagenes/wpp.png" class="twitter" />
+          <img src="imagenes/instagram.png" class="twitter" />
+        </div>
+      </footer>
+    </div>
+  </body>
+  
+</html>
