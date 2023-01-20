@@ -5,11 +5,6 @@ body {
     font-family: 'Montserrat', 'Roboto', sans-serif;
 }
 
-.mainContent {
-    display: flex;
-    flex-direction: column;
-}
-
 .nav {
     display: flex;
     justify-content: space-around;
@@ -25,22 +20,23 @@ body {
 }
 
 .bolsa {
-    width: auto;
-    height: auto;
     margin-right: -3%;
     margin-top: 1%;
 }
-.bolsa-img{
+
+.bolsa-img {
     width: 30%;
 }
-.menu-img{
+
+.menu-img {
     width: 30%;
 }
-.logo-img{
+
+.logo-img {
     width: 60%;
 }
+
 .line {
-    width: 100vw;
     margin-top: -10%;
 }
 
@@ -53,7 +49,8 @@ body {
 h1 {
     margin: 1;
 }
-h2{
+
+h2 {
     font-weight: 400;
 }
 
@@ -100,7 +97,6 @@ h2{
     flex-direction: column;
     align-items: center;
     width: 20.5vw;
-
 }
 
 #product-image {
@@ -116,26 +112,23 @@ h2{
 }
 
 #product-title {
-    
     letter-spacing: 0.2vh;
     font-size: 2.5vh;
     line-height: 3.5vh;
     text-align: center;
     max-width: 40vw;
+    font-weight: 600;
 }
 
 #product-description {
-   
     margin-top: 5vh;
     height: 5.34vh;
     max-width: 40vw;
     line-height: 1.8vh;
     font-size: 1.5vh;
-
 }
 
 #product-price {
-    
     font-size: 3vh;
     margin-top: 3vh;
     text-align: start;
@@ -143,15 +136,14 @@ h2{
 }
 
 #product-button {
-    
     text-align: center;
     border-color: black;
     background-color: white;
     border-radius: 5vh;
-    font-size: 80%;
+    font-size: 1.3vh;
     width: 20%;
-    
-    
+
+
 }
 
 #product-button:hover {
@@ -161,17 +153,11 @@ h2{
 
 .line2 {
     margin-top: 1%;
-    z-index: 1;
-    width: 100vw;
 }
 
 .footer {
     display: flex;
     justify-content: space-around;
-    margin-bottom: 0;
-    position: absolute;
-    left: 0;
-    right: 0;
     height: 10vh;
 }
 
@@ -189,7 +175,7 @@ h2{
 
 a {
     text-decoration: none;
-    color: white
+    color: white;
 }
 
 /********************************
@@ -197,28 +183,27 @@ a {
 ********************************/
 
 .main-cart {
-    
+
     width: 60vw;
     text-align: center;
     padding-bottom: 10vh;
 }
 
 .total-cart {
-    
     width: 20vw;
     height: 65vh;
     margin-left: 5%;
     text-align: center;
-
 }
 
 .body-cart {
     display: flex;
-    justify-content: center;
+    margin-left: 5vw;
+    min-height: 68vh;
 }
 
 .body-cart h2 {
-    padding-top:3vh
+    padding-top: 3vh
 }
 
 .itemQuantity {
@@ -231,22 +216,27 @@ a {
 
 .subtract,
 .add {
-   
+
     text-align: center;
-    margin-top: 1vh;
     border-color: black;
     border-radius: 5vh;
     background-color: white;
-    padding-top: 0.3vh;
-    padding-bottom: 0.3vh;
-    padding-left: 1vh;
-    padding-right: 1vh;
     margin-right: 2vh;
     margin-left: 2vh;
+    width: 1.5vw;
+    height: 3vh;
+}
+
+td {
+    text-align: center;
+}
+
+button {
+    font-family: "Montserrat";
 }
 
 #delete-button {
-    
+
     text-align: center;
     margin-top: 1vh;
     border-color: black;
@@ -265,12 +255,11 @@ a {
 #tramitarPedido:hover {
     background-color: #EFBBD5;
     cursor: pointer;
-
 }
 
 .deleteCart,
 #tramitarPedido {
-    
+
     text-align: center;
     margin-top: 1vh;
     border-color: black;
@@ -285,13 +274,62 @@ a {
 
 }
 
+input {
+    border: none;
+    border-radius: 1vh;
+}
+
+.personaldata-container {
+    width: 30%;
+}
+
+.shipping-container {
+    width: 30%;
+}
+
+.data-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 6vh;
+}
+
 .total-cart {
     background-color: #ffedf6;
+    width: 35vw;
+    height: 80vh;
+    position: fixed;
+    margin-left: 50vw;
+    margin-top: 5vh;
+    z-index: 1;
+}
+
+h5 {
+    font-weight: 400;
+}
+
+.resume{
+    background-color: #ffedf6;
+    width: 20vw;
+    height: 65vh;
+    margin-left: 5%;
+    margin-top: 4vh;
+    text-align: center;
+    position: fixed;
+    margin-left: 67vw;
+}
+
+.main-shopping {
+    width: 40vw;
+}
+
+.body-cart2 {
+    display: flex;
+    margin-left: 10vw;
 }
 
 #total {
-    margin-bottom: 2vh;
-    margin-top: 2vh;
+    margin-top: 4vh;
+    margin-bottom: -2vh;
 }
 
 h2 {
@@ -303,15 +341,12 @@ h2 {
     height: 2vh;
     transform: translateY(-4.7vh);
     margin-left: 1vh;
-    width: auto;
 
 }
 
 .line3 {
     margin-top: 2%;
-
 }
-
 
 @media (max-width: 1500px) {
     #box {
@@ -350,6 +385,26 @@ h2 {
         height: auto;
         width: 95vw;
     }
+
+    .body-cart2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+    .data-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+    .total-cart {
+       position: relative;
+       margin: 0;
+       height: auto;
+       margin-top: 5vh;
+       width: 60vw;
+    }
 }
 
 @media (max-width: 700px) {
@@ -367,19 +422,22 @@ h2 {
         height: auto;
         width: 90vw;
     }
-   
-    #product-price{
-        width:58%;
+
+    #product-price {
+        width: 58%;
     }
-    #product-title{
+
+    #product-title {
         font-size: 3vh;
         margin-top: 6vh;
-        
+
     }
-    #product-description{
+
+    #product-description {
         font-size: 1.9vh;
     }
-    #product-image{
+
+    #product-image {
         width: 30%;
     }
 

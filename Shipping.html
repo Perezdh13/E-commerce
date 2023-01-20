@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style.css" rel="stylesheet" />
-    
-
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&family=Montserrat:wght@200;400;600&family=Roboto:wght@700&display=swap"
+        rel="stylesheet" />
     <script src="./js/Objects.js" defer></script>
     <script src="./js/cart.js" defer></script>
     <script src="./js/script.js" defer></script>
@@ -30,9 +31,9 @@
       
       <section >
         
-          <div class="body-cart">
+          <div class="body-cart2">
               <div >
-                  <h2>Articles</h2>
+                  <h2>Artículos</h2>
                   <table class="main-shopping">
                       <tr>
                         <td></td>
@@ -46,34 +47,43 @@
               </div>
               <div class="total-cart">
                 <form action="get">
-  
-  
-                  <h2>Enter Shipping Details</h2>
-                  <h5>NAME</h5>
-                  <input type="text" name="" id="">
-                  <h5>SURNAMES</h5>
-                  <input type="text" name="" id="">
-                  <h5>DIRECTIONS</h5>
-                  <input type="text" name="" id="">
-                  <h5>EMAIL</h5>
-                  <input type="mail" name="" id="">
-                  <h5>PHONE</h5>
-                  <input type="tel" name="" id="">
+                  <h2>Introduce tus datos</h2>
+                  <div class="data-container">
+                    <div class="personaldata-container">
+                      <h4>Datos personales</h4>
+                      <h5>Nombre</h5>
+                      <input type="text" name="" id="">
+                      <h5>Apellidos</h5>
+                      <input type="text" name="" id="">
+                      <h5>E-mail</h5>
+                      <input type="text" name="" id="">
+                      <h5>Repetir e-mail</h5>
+                      <input type="mail" name="" id="">
+                      <h5>Teléfono Móvil</h5>
+                      <input type="tel" name="" id="">
+                    </div>
+                    <div class="shipping-container">
+                      <h4>Datos de envío</h4>
+                      <h5>Dirección</h5>
+                      <input type="text" name="" id="">
+                      <h5>Código postal</h5>
+                      <input type="text" name="" id="">
+                      <h5>Ciudad</h5>
+                      <input type="text" name="" id="">
+                      <h5>Provincia</h5>
+                      <input type="text" name="" id="">
+                      <h5>Pais</h5>
+                      <input type="text" name="" id="">
+                    </div>
+                </div>
+                <hr class="line2" />
                   <p id="total">Total<br></p>
-                  <button id="tramitarPedido">Ended Shopping</button>
+                  <button class= "shopping" id="tramitarPedido">Finalizar compra</button>
                 </form>
               </div>
           </div>
           <a href="index.html"> --Continue Shopping</a>
       </section>
-      <hr class="line2">
-      <footer>
-        <div class="footer">
-          <img src="imagenes/twitter.png" class="twitter" />
-          <img src="imagenes/wpp.png" class="twitter" />
-          <img src="imagenes/instagram.png" class="twitter" />
-        </div>
-      </footer>
     </div>
   </body>
   
