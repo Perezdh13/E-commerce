@@ -1,8 +1,6 @@
 
 let cart = JSON.parse(localStorage.getItem('cart')) || []
 
-let totalItem = totalItem2();
-
 const DOMcart = document.querySelector('.main-cart');
 const DOMbuttonDeleteCart = document.querySelector('.deleteCart');
 
@@ -90,7 +88,7 @@ function totalItem2() {
     return sumatorio
 };
 
- function totalCart() {
+function totalCart() {
     var total = 0;
     if (cart !== null) {
         for (let i = 0; i < cart.length; i++) {

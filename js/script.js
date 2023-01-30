@@ -14,7 +14,6 @@ DOMtotal.forEach(param => {
 })
 
 
-
 function renderIndex() {
 
     var news = products.filter(item => item.category == "New");
@@ -65,14 +64,8 @@ function printNew(item) {
 function shoppingButton(event) {
 
     let itemMarker = event.target.getAttribute('marker')
-
-    //let position = products.map(element => element.id.toString()).indexOf(itemMarker);
-    //console.info(typeof itemMarker)
     let storage = products.find(element => element.id.toString() == itemMarker )
-    // console.info(object)
-    //let storage = products[position];
-    
-
+ 
     const exist = cart.some(product => product.id === storage.id);
     if (exist) {
         const pro = cart.map(product => {
@@ -90,7 +83,6 @@ function shoppingButton(event) {
     }
 
     localStorage.setItem('cart', JSON.stringify(cart))
-    
     totalItem2()
     location.reload()
 };
