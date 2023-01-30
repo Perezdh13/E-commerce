@@ -18,9 +18,9 @@
 
      * Además de esto tenemos un desafío extra que es el uso de una API de chatBoot.
 
-  Este proyecto se continuará desarrollando a medida que el curso avance y aprendamos nuevas técnicas (implementación de nuevos lenguajes de programación, refactorizacion de funciones y clean code, etc). Si queréis visitar la página del proyecto podéis hacerlo desde este enlace: https://perezdh13.github.io/e-comerce/
+  Este proyecto se continuará desarrollando a medida que el curso avance y aprendamos nuevas técnicas (implementación de nuevos lenguajes de programación, refactorizacion de funciones y clean code, etc). Si queréis visitar la página del proyecto podéis hacerlo desde este enlace: https://perezdh13.github.io/E-commerce/
 
-  Para la realización de este proyecto hemos creado un mockup en Figma, además de un pequeño user flow creado con PowerPoint. Los lenguajes de programacion utilizados han sido HTML, CSS y JavaScript. Este último ha sido empleado para la creación de todos los productos de la página en un formato tipo JSON. 
+  Para la realización de este proyecto hemos creado un mockup en Figma. Los lenguajes de programacion utilizados han sido HTML, CSS y JavaScript. Este último ha sido el empleado para la creación de todos los productos de la página en un formato tipo JSON. 
 
   Todos los elementos que seleccionamos en el carrito de la compra son guardados en el local storage, de esta manera no se pierden los datos si deseamos dejar la cesta llena para así poder completar la compra en otro momento. El carrito además nos permite:
     
